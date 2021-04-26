@@ -1,5 +1,4 @@
 import requests
-from bs4 import BeautifulSoup
 from selenium import webdriver
 import time
 import re
@@ -14,7 +13,7 @@ driver = webdriver.Chrome(executable_path='/snap/bin/chromium.chromedriver')
 
 
 def find_hashtags(hashtag):
-    driver.get('https://twitter.com/hashtag/' + hashtag + '?src=hash')
+    driver.get('https://twitter.com.')
     body = driver.find_element_by_tag_name('body')
     wait = ui.WebDriverWait(driver, 5)
     while True:
