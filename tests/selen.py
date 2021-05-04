@@ -11,6 +11,7 @@ wait = WebDriverWait(driver, 20)
 wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".product-title-link.line-clamp.line-clamp-2.truncate-title>span")))
 
 elems = driver.find_elements_by_css_selector(".product-title-link.line-clamp.line-clamp-2.truncate-title>span")
+driver.find_element_by_xpath()
 for el in elems:
     print(el.text)
 driver.close()
