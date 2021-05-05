@@ -1,3 +1,5 @@
+import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -11,5 +13,6 @@ wait = WebDriverWait(driver, 30)
 wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".sc-pAyMl.dwWbEz .sc-AxiKw.kOAUSS>.sc-AxhCb.gsXzyw")))
 cookies = driver.find_element_by_css_selector(".sc-pAyMl.dwWbEz .sc-AxiKw.kOAUSS>.sc-AxhCb.gsXzyw").click()
 load_more = driver.find_element_by_css_selector(".competition-leaderboard__load-more-count").click()
-driver.close()
-driver.quit()
+time.sleep(10)
+# driver.close()
+# driver.quit()
