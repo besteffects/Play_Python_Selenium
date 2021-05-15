@@ -16,7 +16,7 @@ driver = webdriver.Chrome(executable_path='/snap/bin/chromium.chromedriver', chr
 wait = WebDriverWait(driver, 30)
 driver.get("https://www.seekingalpha.com/login")
 wait.until(EC.element_to_be_clickable((By.NAME, "email"))).send_keys("sviderskyi.vitalii@gmail.com")
-wait.until(EC.element_to_be_clickable((By.ID, "signInPasswordField"))).send_keys("Youget4w")
+wait.until(EC.element_to_be_clickable((By.ID, ""))).send_keys("")
 wait.until(EC.element_to_be_clickable((By.XPATH, "//button[text()='Sign in']"))).click()
 
 driver.get("https://seekingalpha.com/article/4414043-agenus-inc-agen-ceo-garo-armen-on-q4-2020-results-earnings-call-transcript")
