@@ -15,7 +15,7 @@ PASSWORD = "Password"
 driver = webdriver.Chrome(executable_path='/snap/bin/chromium.chromedriver', chrome_options=chrome_options)
 wait = WebDriverWait(driver, 30)
 driver.get("https://www.seekingalpha.com/login")
-wait.until(EC.element_to_be_clickable((By.NAME, "email"))).send_keys("sviderskyi.vitalii@gmail.com")
+wait.until(EC.element_to_be_clickable((By.NAME, ""))).send_keys("s")
 wait.until(EC.element_to_be_clickable((By.ID, ""))).send_keys("")
 wait.until(EC.element_to_be_clickable((By.XPATH, "//button[text()='Sign in']"))).click()
 
