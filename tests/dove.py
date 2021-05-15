@@ -4,7 +4,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-driver = webdriver.Chrome(executable_path='/snap/bin/chromium.chromedriver')
+driver = webdriver.Firefox()
 driver.implicitly_wait(10)
 driver.get("https://www.dove.com/us/en/skin-care/body-lotion/cream-oil-intensive-body-lotion.html")
 wait = WebDriverWait(driver, 30)
@@ -14,7 +14,8 @@ driver.find_element_by_css_selector(".collapsed>a[title='Ingredients']").click()
 wait.until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(),'Go to SmartLabel')]")))
 driver.find_element_by_xpath("//button[contains(text(),'Go to SmartLabel')]").click()
 driver.switch_to.window(driver.window_handles[1])
-driver.close()
+wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".container-fluid.content-section")))
 print(driver.current_url)
+driver.close()
 driver.switch_to.window(driver.window_handles[0])
 print(driver.current_url)
