@@ -7,7 +7,8 @@ from bs4 import BeautifulSoup
 
 url = "https://www.amundietf.co.uk/professional/product/view/LU1681038243"
 driver = webdriver.Chrome(executable_path='/snap/bin/chromium.chromedriver')
-driver.implicitly_wait(10)
+driver.implicitly_wait(10).g
+driver.find_element_by_xpath('//button[@data-is-focusable="true"]').click()
 driver.get(url)
 driver.find_element_by_id("footer_tc_privacy_button_3").click()
 driver.find_element_by_id("validateDisclaimer").click()
