@@ -17,6 +17,6 @@ levels = driver.find_elements_by_css_selector(".beatmaps-popup__group .beatmaps-
 for level in levels:
     print(level.text)
 
-scores= driver.find_elements_by_css_selector(".beatmaps-popup__group .beatmaps-popup-item__col.beatmaps-popup-item__col--difficulty")
+scores = driver.find_elements_by_css_selector(".beatmaps-popup__group .beatmaps-popup-item__col.beatmaps-popup-item__col--difficulty")
 for score in scores:
     print(score.text)
