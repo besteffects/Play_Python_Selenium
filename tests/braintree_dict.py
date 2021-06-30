@@ -23,8 +23,9 @@ for item in data:
     bin_date = parser.parse(item.find('p').text).strftime('%Y-%m-%d')
     result[bin_colour]=bin_date
 
-print(result)
+#print(result)
+print(json.dumps(result))
 
-for k, v in result.items():
-    print(k, v)
+# for k, v in result.items():
+#     print(k, v)
 # browser.quit()
